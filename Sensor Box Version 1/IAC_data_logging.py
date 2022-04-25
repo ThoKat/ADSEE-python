@@ -26,8 +26,10 @@ except:
 
 if dev:
     currentTime = time.time()
+    ###YOUR CODE HERE###
     with open('test.dat', 'a') as test:
         test.write('load_cell, time_of_flight\n')
+    
     while running:
         # Delay 1 second
         while currentTime + 1 > time.time():
@@ -49,6 +51,10 @@ if dev:
     
         
 else:
+    ###YOUR CODE HERE###
+    with open('test.dat', 'a') as test:
+        test.write('load_cell, time_of_flight\n')
+    
     while running:
         line = ser.readline()[:-2].decode('utf-8')
         print(line)
@@ -56,3 +62,9 @@ else:
         ####################
         ###YOUR CODE HERE###
         ####################
+
+        line1 = line.replace('load_cell ','')
+        lineOutput = line1.replace(' time_of_flight',',')
+
+        with open('test.dat', 'a') as test:
+            test.write(f'{lineOutput}\n')
