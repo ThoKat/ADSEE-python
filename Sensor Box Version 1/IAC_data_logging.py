@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 This program is used to load the data from the USB serial.
- Whenever the serial port receives data, it will be placed in
- the "line" variable. From here, it needs to be parsed and saved.
+Whenever the serial port receives data, it will be placed in the "line" variable. From here, it needs to be parsed and saved.
  
-You can enable a "development" mode which will feed fake data 
- by setting dev = True
+You can enable a "development" mode which will feed fake data by setting dev = True
 """
 
 import serial
@@ -28,6 +26,8 @@ except:
 
 if dev:
     currentTime = time.time()
+    with open('test.dat', 'a') as test:
+        test.write('load_cell, time_of_flight\n')
     while running:
         # Delay 1 second
         while currentTime + 1 > time.time():
@@ -35,13 +35,16 @@ if dev:
         currentTime = time.time()
         line = development_data()[:-2].decode('utf-8')
         print(line)
-
+        
         ####################
         ###YOUR CODE HERE###
         ####################
 
+        line1 = line.replace('load_cell ','')
+        lineOutput = line1.replace(' time_of_flight',',')
+
         with open('test.dat', 'a') as test:
-            test.write(f'{line}\n')
+            test.write(f'{lineOutput}\n')
         
     
         
