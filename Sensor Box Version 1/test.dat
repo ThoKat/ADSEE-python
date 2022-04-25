@@ -1,6 +1,9 @@
-load_cell -4799 time_of_flight 3267
-load_cell 7803 time_of_flight 896
-load_cell -3007 time_of_flight 2367
-load_cell 5593 time_of_flight 4143
-load_cell -3906 time_of_flight 1189,load_cell -3906 time_of_flight 1189
-load_cell 4144 time_of_flight 2315,load_cell 4144 time_of_flight 2315
+load_cell 962 time_of_flight 1508
+load_cell 4854 time_of_flight 3109
+load_cell 2947 time_of_flight 682
+load_cell 2867 time_of_flight 2824
+load_cell -6646 time_of_flight 2654
+load_cell 7644 time_of_flight 3234
+load_cell -3351 time_of_flight 2885
+load_cell 192 time_of_flight 92
+load_cell -9174 time_of_flight 3629

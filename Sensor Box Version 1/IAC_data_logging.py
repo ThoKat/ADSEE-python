@@ -18,6 +18,8 @@ usbPort = "editMe"      # Your USB port, obtain using port_scan()
 try:
     if not dev:
         ser = serial.Serial(usbPort, 9600)
+    if dev:
+        print('Ports: ',port_scan())
     running = True
     print("Serial initialized succesfully!")
 except:
