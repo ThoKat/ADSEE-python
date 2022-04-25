@@ -29,7 +29,13 @@ try:
         # Output sensor data
         print("Load cell: {:.0f}, Distance: {:.0f}".format(loadCellValue, tofValue))
         # print("Load cell: {:.0f}".format(loadCellValue))
-
+        
+        
+        with open('test2.dat', 'a') as test:
+            test.write("Load cell: {:.0f}, Distance: {:.0f}".format(loadCellValue, tofValue)"\n")
+        with open('test3.dat', 'a') as test:
+            test.write(f'{loadCellValue},{tofValue}\n')
+        
         # Sleep
         time.sleep(1)
 
