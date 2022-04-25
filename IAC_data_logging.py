@@ -34,13 +34,15 @@ if dev:
         line = development_data()[:-2].decode('utf-8')
         print(line)
 
-
-        with open('test.dat', 'a') as test:
-            test.write(f'{line}\n')
-    
         ####################
         ###YOUR CODE HERE###
         ####################
+
+        with open('test.dat', 'a') as test:
+            test.write(f'{line}\n')
+        
+    
+        
 else:
     while running:
         line = ser.readline()[:-2].decode('utf-8')
