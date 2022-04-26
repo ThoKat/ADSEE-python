@@ -2,6 +2,9 @@
 with open('test.dat', 'r') as test:
     # Get a single-line header from our file
     header = test.readline()
+    with open('output.dat', 'a') as output:
+        output.write('Output of the test\n')
+    
     for line in test:
         # print(line)
         
