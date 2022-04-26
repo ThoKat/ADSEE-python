@@ -1,3 +1,4 @@
+# Thomas van Wijk, 26-04-2022 11:05
 # -*- coding: utf-8 -*-
 """
 This program is used to load the data from the USB serial.
