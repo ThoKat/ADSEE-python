@@ -1,3 +1,4 @@
+Output of the test
 load cell: 5999 and time of flight: 4669
 load cell: -1321 and time of flight: 2757
 load cell: -7523 and time of flight: 4009
