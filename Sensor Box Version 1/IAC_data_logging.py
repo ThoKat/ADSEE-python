@@ -45,8 +45,11 @@ if dev:
         line1 = line.replace('load_cell ','')
         lineOutput = line1.replace(' time_of_flight',',')
 
+        named_tuple = time.localtime() # get struct_time
+        time_string = time.strftime("%H:%M:%S", named_tuple)
+
         with open('test.dat', 'a') as test:
-            test.write(f'{lineOutput}\n')
+            test.write(f'{lineOutput}, {time_string}\n')
         
     
         
