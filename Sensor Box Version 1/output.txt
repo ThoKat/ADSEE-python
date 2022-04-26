@@ -1,0 +1,6 @@
+load cell: 5999 and time of flight: 4669
+load cell: -1321 and time of flight: 2757
+load cell: -7523 and time of flight: 4009
+load cell: -7894 and time of flight: 3447
+load cell: 1166 and time of flight: 4556
+load cell: 5652 and time of flight: 2871

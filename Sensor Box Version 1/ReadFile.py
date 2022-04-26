@@ -13,3 +13,7 @@ with open('test.dat', 'r') as test:
         time_of_flight = values[1].strip()
 
         print(f'load cell: {load_cell} and time of flight: {time_of_flight}')
+
+        with open('output.txt', 'a') as output:
+            output.write(f'load cell: {load_cell} and time of flight: {time_of_flight}\n')
+        
