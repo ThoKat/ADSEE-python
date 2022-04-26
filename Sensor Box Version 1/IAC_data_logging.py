@@ -28,7 +28,7 @@ if dev:
     currentTime = time.time()
     ###YOUR CODE HERE###
     with open('test.dat', 'a') as test:
-        test.write('load_cell, time_of_flight\n')
+        test.write('Load Cell, Time of Flight\n')
     
     while running:
         # Delay 1 second
