@@ -57,7 +57,9 @@ else:
     ###YOUR CODE HERE###
     with open('testReal.dat', 'a') as test:
         test.write('load_cell, time_of_flight, time\n')
-        test.write('1365.3 + 0 > 1365.3 + 2625.9\n') #3991.2
+        
+    with open('testCal1.dat', 'a') as test:
+        test.write('New calibration data\n')
     
     while running:
         line = ser.readline()[:-2].decode('utf-8')
@@ -80,7 +82,9 @@ else:
             force = float(lineSplit[0])*a + b
             print('Force: ',force)
         except:
-            print("N")
+            z = 0
+            #print("A")
+        
         named_tuple = time.localtime() # get struct_time
         time_string = time.strftime("%H:%M:%S", named_tuple)
 
@@ -94,4 +98,5 @@ else:
             with open('testCal1.dat', 'a') as test:
                 test.write(f'{ValueCall}\n')
         except:
-            print("N")
+            z = 1
+            #print("W")

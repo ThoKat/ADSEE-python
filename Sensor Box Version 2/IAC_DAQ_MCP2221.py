@@ -19,6 +19,12 @@ tofSensor = adafruit_vl53l0x.VL53L0X(i2c)
 
 print("Starting measurements. \n")
 
+with open('test3.dat', 'a') as test:
+    test.write('load cell, distance, time\n')
+
+with open('testCal1.dat', 'a') as test:
+    test.write('New calibration data\n')
+
 # Perform measurements
 try:
     while True:
@@ -33,20 +39,18 @@ try:
         named_tuple = time.localtime() # get struct_time
         time_string = time.strftime("%H:%M:%S", named_tuple)
 
-
         a = -0.1137
-        b = 686.68
+        b = -686.68
         
         try:
             print(loadCellValue)
-            force = float(loadCellValue)*a - b
+            force = float(loadCellValue)*a + b
             print('Force: ',force)
         except:
-            print("N")
+            z = 0
+            #print("A")
 
-        
-        #with open('test2.dat', 'a') as test:
-            #test.write("Load cell: {:.0f}, Distance: {:.0f}".format(loadCellValue, tofValue)", {time_string}\n")
+
         with open('test3.dat', 'a') as test:
             test.write(f'{loadCellValue},{tofValue}, {time_string}\n')
         ValueCall = int(loadCellValue)
