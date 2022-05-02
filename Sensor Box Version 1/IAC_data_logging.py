@@ -55,7 +55,7 @@ if dev:
 
 else:
     ###YOUR CODE HERE###
-    with open('test.dat', 'a') as test:
+    with open('testReal.dat', 'a') as test:
         test.write('load_cell, time_of_flight\n')
     
     while running:
@@ -72,5 +72,5 @@ else:
         named_tuple = time.localtime() # get struct_time
         time_string = time.strftime("%H:%M:%S", named_tuple)
 
-        with open('test.dat', 'a') as test:
+        with open('testReal.dat', 'a') as test:
             test.write(f'{lineOutput}, {time_string}\n')
