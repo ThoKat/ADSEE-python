@@ -11,8 +11,8 @@ import serial
 import time
 from IAC_helper import port_scan, development_data
 
-dev = False              # Development mode
-usbPort = "Com5"      # Your USB port, obtain using port_scan()
+dev = False             # Development mode
+usbPort = "Com5"        # Your USB port, obtain using port_scan()
 
 try:
     if not dev:
