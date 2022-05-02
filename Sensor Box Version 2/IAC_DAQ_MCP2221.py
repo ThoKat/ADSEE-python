@@ -32,11 +32,26 @@ try:
 
         named_tuple = time.localtime() # get struct_time
         time_string = time.strftime("%H:%M:%S", named_tuple)
+
+
+        a = -0.1137
+        b = 686.68
         
-        with open('test2.dat', 'a') as test:
-            test.write("Load cell: {:.0f}, Distance: {:.0f}".format(loadCellValue, tofValue)", {time_string}\n")
+        try:
+            print(loadCellValue)
+            force = float(loadCellValue)*a - b
+            print('Force: ',force)
+        except:
+            print("N")
+
+        
+        #with open('test2.dat', 'a') as test:
+            #test.write("Load cell: {:.0f}, Distance: {:.0f}".format(loadCellValue, tofValue)", {time_string}\n")
         with open('test3.dat', 'a') as test:
             test.write(f'{loadCellValue},{tofValue}, {time_string}\n')
+        ValueCall = int(loadCellValue)
+        with open('testCal2.dat', 'a') as test:
+            test.write(f'{ValueCall}\n')
         
         # Sleep
         time.sleep(1)
