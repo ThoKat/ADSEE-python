@@ -47,7 +47,7 @@ try:
             force = float(loadCellValue)*a + b
             print('Force: ',force)
         except:
-            z = 0
+            pass
             #print("A")
 
 

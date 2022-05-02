@@ -82,7 +82,7 @@ else:
             force = float(lineSplit[0])*a + b
             print('Force: ',force)
         except:
-            z = 0
+            pass
             #print("A")
         
         named_tuple = time.localtime() # get struct_time
@@ -98,5 +98,5 @@ else:
             with open('testCal1.dat', 'a') as test:
                 test.write(f'{ValueCall}\n')
         except:
-            z = 1
+            pass
             #print("W")
