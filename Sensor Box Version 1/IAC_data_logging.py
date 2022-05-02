@@ -13,6 +13,7 @@ from IAC_helper import port_scan, development_data
 
 dev = False             # Development mode
 usbPort = "Com5"        # Your USB port, obtain using port_scan()
+
 force = 0
 distance = 0
 
