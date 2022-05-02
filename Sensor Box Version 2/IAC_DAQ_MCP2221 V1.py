@@ -17,16 +17,10 @@ loadCelSensor = NAU7802(board.I2C(), address=0x2a, active_channels=1)
 i2c = busio.I2C(board.SCL, board.SDA)
 tofSensor = adafruit_vl53l0x.VL53L0X(i2c)
 
-force = 0
-distance = 0
-
 print("Starting measurements. \n")
 
 with open('test3.dat', 'a') as test:
     test.write('load cell, distance, time\n')
-    
-with open('testReal.dat', 'a') as test:
-    test.write('Load Cell (N), Distance, Time\n')
 
 with open('testCal1.dat', 'a') as test:
     test.write('New calibration data\n')
@@ -40,6 +34,7 @@ try:
 
         # Output sensor data
         print("Load cell: {:.0f}, Distance: {:.0f}".format(loadCellValue, tofValue))
+        # print("Load cell: {:.0f}".format(loadCellValue))
 
         named_tuple = time.localtime() # get struct_time
         time_string = time.strftime("%H:%M:%S", named_tuple)
@@ -49,23 +44,15 @@ try:
         
         try:
             print(loadCellValue)
-            gram = float(loadCellValue)*a + b
-            print('Grams: ',gram)
-            kilo = gram/1000
-            force = kilo*9.81
+            force = float(loadCellValue)*a + b
             print('Force: ',force)
-            distance = tofValue
-            print('Distance: ',distance)
         except:
             pass
+            #print("A")
 
 
         with open('test3.dat', 'a') as test:
             test.write(f'{loadCellValue},{tofValue}, {time_string}\n')
-            
-        with open('testReal.dat', 'a') as test:
-            test.write(f'{force}, {distance}, {time_string}\n')
-            
         ValueCall = int(loadCellValue)
         with open('testCal2.dat', 'a') as test:
             test.write(f'{ValueCall}\n')
