@@ -1,12 +1,12 @@
 # Design-Construction-python
-Hey,
-Welcome to this README.
+*Hey,
+Welcome to this README.*
 
-This is not important.
+~~*This is not important.*~~
 
-This is for quarter 4 project testing code.
+*This is for quarter 4 project testing code.*
 
-Good luck and goodbye.
+***Good luck and goodbye.***
 
 
 
