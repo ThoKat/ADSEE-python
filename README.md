@@ -4,7 +4,7 @@ Welcome to this README.*
 
 ~~*This is not important.*~~
 
-*This is for quarter 4 project testing code.*
+*This is for quarter 4 project testing code.* :small_airplane:
 
 ***Good luck and goodbye :+1:.***
 
@@ -13,6 +13,6 @@ Welcome to this README.*
 ![GitHub Dark](https://github.com/github-dark.png#gh-light-mode-only)
 
 
-Why are you still here?
+Why are you still here :interrobang: :trollface:
 
-Leave!
+Leave :bangbang: :wave:
