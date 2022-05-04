@@ -6,7 +6,7 @@ Welcome to this README.*
 
 *This is for quarter 4 project testing code.*
 
-***Good luck and goodbye.***
+***Good luck and goodbye :+1:.***
 
 
 ![GitHub Light](https://github.com/github-light.png#gh-dark-mode-only)
