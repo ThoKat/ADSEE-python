@@ -13,6 +13,6 @@ Welcome to this README.*
 ![GitHub Dark](https://github.com/github-dark.png#gh-light-mode-only)
 
 
-Why are you still here :interrobang: :trollface:
+:raised_eyebrow: Why are you still here :interrobang: :trollface:
 
 Leave :bangbang: :wave:
