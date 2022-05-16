@@ -12,7 +12,7 @@ import time
 from IAC_helper import port_scan, development_data
 
 dev = False             # Development mode
-usbPort = "Com5"        # Your USB port, obtain using port_scan()
+usbPort = "Com7"        # Your USB port, obtain using port_scan()
 
 force = 0
 distance = 0
@@ -55,7 +55,7 @@ else:
     with open('testReal.dat', 'a') as test:
         test.write('load_cell, time_of_flight, time\n')
     
-    with open('testReal2.dat', 'a') as test:
+    with open('RealTest.dat', 'a') as test:
         test.write('Load Cell (N), Distance, Time\n')
     
     with open('testCal1.dat', 'a') as test:
@@ -70,8 +70,8 @@ else:
 
         lineSplit = lineOutput.split(',')
 
-        a = -0.0058
-        b = 4912.2
+        a = -0.0221
+        b = 2392.8
 
         try:
             print(lineSplit[0])
@@ -92,7 +92,7 @@ else:
         with open('testReal.dat', 'a') as test:
             test.write(f'{lineOutput}, {time_string}\n')
             
-        with open('testReal2.dat', 'a') as test:
+        with open('RealTest.dat', 'a') as test:
             test.write(f'{force}, {distance}, {time_string}\n')
             
         try:
